@@ -2,7 +2,7 @@
 
 # Like/Reactions Button (SwiftUI)
 
-An example of a simple reactions button  (UI like facebook, LinkedIn) written in Swift for SwiftUI. iOS 14+.
+An simple example of a reactions button (UI like facebook, LinkedIn) written in Swift for SwiftUI. iOS 14+.
 
 <p align="center">
 <img src="README.assets/record.gif" alt="iPhone_11_Pro_2022-05-26_01.34.07" style="zoom: 25%;" />
@@ -35,7 +35,7 @@ ReactionsView(reactions){ reaction in
 
 This closure give you a reaction element which is the reaction selected by the user. You can call whatever logic here. For example, I use this for save the reaction in Firebase from a post.
 
-```
+```swift
 ReactionsView(K.reactions, defaultReaction: post.reaction) { reaction in
   Task{
     await postVM.setReaction(post:post, value:reaction.index)
